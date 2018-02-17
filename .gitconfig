@@ -1,0 +1,15 @@
+[user]
+	name = Brendon Kay
+	email = brendon.kay@logicsupply.com
+[core]
+	editor = vim
+[push]
+	default = simple
+[alias]
+	st = status
+	unstage = reset HEAD --
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	branch-owners = for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)'
+[pull]
+	rebase = preserve
