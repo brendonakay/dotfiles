@@ -8,6 +8,9 @@ set autoindent    " align the new line indent with the previous line
 set nu
 set relativenumber
 
+"Python
+set colorcolumn=80
+
 " Pathogen load
 filetype off
 
