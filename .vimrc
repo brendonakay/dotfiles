@@ -7,9 +7,13 @@ set shiftround    " round indent to multiple of 'shiftwidth'
 set autoindent    " align the new line indent with the previous line
 set nu
 set relativenumber
+set mouse=a
 
-"Python
+"Python https://www.fullstackpython.com/vim.html
 set colorcolumn=80
+set ts=4
+set cursorline
+set python_highlight_all = 1
 
 " Pathogen load
 filetype off
