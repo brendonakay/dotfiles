@@ -13,7 +13,6 @@ set mouse=a
 set colorcolumn=80
 set ts=4
 set cursorline
-set python_highlight_all = 1
 
 " Pathogen load
 filetype off
