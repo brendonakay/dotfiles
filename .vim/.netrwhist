@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/brendon.kay/.ssh'
-let g:netrw_dirhist_2='/home/brendon.kay/automation/logicsupply'
-let g:netrw_dirhist_3='/home/brendon.kay/notes'
-let g:netrw_dirhist_4='/home/brendon.kay/workspace/docker_dev/odoo/ls_addons10/ls_sale_report'
