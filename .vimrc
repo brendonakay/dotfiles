@@ -9,6 +9,9 @@ set nu
 set relativenumber
 set mouse=a
 
+" Show trailing whitespace:
+match ExtraWhitespace /\s\+$/
+
 "Python https://www.fullstackpython.com/vim.html
 set colorcolumn=80
 set ts=4
