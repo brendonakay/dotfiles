@@ -8,9 +8,13 @@ set autoindent    " align the new line indent with the previous line
 set nu
 set relativenumber
 set mouse=a
+set paste
 
-" Show trailing whitespace:
-match ExtraWhitespace /\s\+$/
+"Tabs
+map <C-t><up> :tabr<cr>
+map <C-t><down> :tabl<cr>
+map <C-t><left> :tabp<cr>
+map <C-t><right> :tabn<cr>
 
 "Python https://www.fullstackpython.com/vim.html
 set colorcolumn=80
