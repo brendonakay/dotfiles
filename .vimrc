@@ -72,3 +72,4 @@ set statusline=%F%m%r%<\ %=%l,%v\ [%L]\ %p%%
 
 " Make sure it always shows
 set laststatus=2
+set splitright
