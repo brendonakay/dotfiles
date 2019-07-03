@@ -21,8 +21,6 @@ set hlsearch
 set showmatch
 syntax enable
 set smarttab
-"set shiftwidth=4
-"set tabstop=4
 set ai
 set si
 set nowrap
@@ -35,7 +33,7 @@ autocmd FileType python setlocal shiftwidth=4 tabstop=4
 autocmd FileType sh setlocal shiftwidth=2 tabstop=2
 autocmd FileType js setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
-set textwidth=79  " lines longer than 79 columns will be broken
+set textwidth=0
 set expandtab     " insert spaces when hitting TABs
 set softtabstop=4 " insert/delete 4 spaces when hitting a TAB/BACKSPACE
 set shiftround    " round indent to multiple of 'shiftwidth'
@@ -65,7 +63,18 @@ set statusline=%F%m%r%<\ %=%l,%v\ [%L]\ %p%%
 set laststatus=2
 set splitright
 set wildmode=longest,list,full
-set wildmenu
 set splitbelow
 set autoread
 au CursorHold * checktime
+
+" From No Plugins video on vim
+set nocompatible
+" :find
+set path+=**
+set wildmenu
+" Create the `tags` file (may need to install ctags first)
+command! MakeTags !ctags -R .
+" NOW WE CAN:
+" - Use ^] to jump to tag under cursor
+" - Use g^] for ambiguous tags
+" - Use ^t to jump back up the tag stack
