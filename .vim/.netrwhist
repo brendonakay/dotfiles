@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/usr/share/vim/vim80/lang'
+let g:netrw_dirhist_2='/Users/brendon/workspace/eba/static'
+let g:netrw_dirhist_3='/Users/brendon/workspace/eba/eba/user_data/explanation/tests'
+let g:netrw_dirhist_4='/Users/brendon/workspace/notes'
+let g:netrw_dirhist_5='/Users/brendon/workspace/eba'
+let g:netrw_dirhist_6='/Users/brendon/workspace/tmp/patches'
