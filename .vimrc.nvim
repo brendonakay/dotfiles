@@ -19,14 +19,11 @@ syntax on
 set ignorecase
 set hlsearch
 set showmatch
-syntax enable
+syntax on
 set smarttab
 set ai
 set si
 set nowrap
-
-" Color scheme
-colorscheme onedark
 
 " Tabs - the bane of my editing
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
@@ -61,7 +58,7 @@ au FileType go set tabstop=4
 " %L(Total number of lines)
 " %p(How far in file we are percentage wise)
 " %%(Percent sign)
-set statusline=%F%m%r%<\ %=%l,%v\ [%L]\ %p%%
+"set statusline=%F%m%r%<\ %=%l,%v\ [%L]\ %p%%
 
 " Change the highlighting so it stands out
 "hi statusline ctermbg=white ctermfg=black
@@ -101,6 +98,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Plug 'tpope/vim-sensible'
 " Plug 'junegunn/seoul256.vim'
+Plug 'joshdick/onedark.vim'
+Plug 'majutsushi/tagbar'
 "
 " " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -214,7 +213,7 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+"set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Using CocList
 " Show all diagnostics
@@ -235,3 +234,18 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR> 
 "
 " END: Vim-Plug Settings
+
+" Color scheme
+colorscheme onedark
+
+hi default link User1 Error
+set statusline =
+set statusline +=[%n]                                    " buffer number
+set statusline +=\ %F                                    " Full path to file
+set statusline +=\ %1*%m%0*                              " modified flag
+set statusline +=\ %=%-20.30{tagbar#currenttag('%s','')} " Current function
+set statusline +=\ %h                                    " [help]
+set statusline +=%r                                      " read only flag
+set statusline +=%w                                      " preview window flag
+set statusline +=%=%-14.(%l,%c%V%)                       " Line, column-virtual column"
+set statusline +=%=lines:\ %-5L                          " Lines in the buffer
